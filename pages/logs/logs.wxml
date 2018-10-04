@@ -1,0 +1,5 @@
+<view class='aAnswer'>
+<text class='border'>1</text>
+<text class='divide'>—</text>
+<text class='border'>2</text>
+</view>

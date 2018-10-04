@@ -1,0 +1,21 @@
+<!--pages/test/test.wxml-->
+
+<view class="index">第{{index+1}}/{{length}}题</view>
+
+
+<!--题干-->
+
+<view class='content'>{{question[index].content}}</view>
+<view class='imageBlock'>
+<block wx:for='{{question[index].urls}}' wx:for-index='indexOfPics' wx:key=''>
+  <image src='{{item}}' class='questionImage' mode='center' bindtap='showImage' data-index='{{indexOfPics}}'></image>
+</block>
+</view>
+
+
+<!--选项-->
+
+<view wx:for='{{options[index]}}' wx:for-index='indexOfOptions' class='options'  wx:key=''>
+  <view class='ABCD' bindtap='choose' data-index='{{indexOfOptions}}'>{{charset[indexOfOptions]}}</view>
+  <text>{{item}}</text>
+</view>

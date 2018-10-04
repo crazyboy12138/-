@@ -1,0 +1,13 @@
+.aAnswer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.border{
+   /* border: 1px solid red;  */
+}
+.divide{
+  line-height: 3rpx;
+  margin-top: -3rpx;
+}

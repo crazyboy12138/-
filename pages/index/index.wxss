@@ -1,0 +1,22 @@
+/**index.wxss**/
+.all{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.mybutton{
+  border: 1px yellow solid;
+  width: 350rpx;
+  height: 100rpx;
+  border-radius: 40%;
+  line-height: 100rpx;
+}
+.avatar{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+  margin-bottom: 50rpx;
+}

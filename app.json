@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/unit/unit",
+    "pages/index/index",
+    "pages/test/test",
+    "pages/result/result",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "五年级数学测试",
+    "navigationBarTextStyle": "black"
+  }
+}

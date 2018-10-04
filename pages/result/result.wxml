@@ -1,0 +1,22 @@
+<!--pages/result/result.wxml-->
+<view class='all'>
+  <view class='three'>
+    <view class='center'>答题统计</view>
+    <view class='flex'>
+      <view class='aview'>题号</view>
+      <view class='aview'>你的答案</view>
+      <view class='aview'>正确答案</view>
+    </view>
+    <view wx:for="{{yours}}" class='flex'>
+      <view class='aview'>{{index+1}}</view>
+      <view class="aview {{wrong[index] ? 'RED' : ''}}">{{item}}</view>
+      <view class='aview'>{{standar[index]}}</view>
+    </view>
+
+    <view class='score'>
+      <view>本次成绩：{{curScore}}</view>
+      <view>最高成绩：{{maxScore}}</view>
+    </view>
+    <button class='back' bindtap='back'>返回</button>
+  </view>
+</view>
