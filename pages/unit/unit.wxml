@@ -1,6 +1,6 @@
 <!--pages/unit/unit.wxml-->
 <view class='content'>
-<button bindtap='unit' data-unitId='1'>第一单元 找规律</button>
-<button bindtap='unit' data-unitId='2'>第二单元 方程</button>
-<button bindtap='unit' data-unitId='3'>第三单元 图形</button>
+<view wx:for='{{units}}' wx:key=''>
+<button bindtap='unit' data-unitId='{{index+1}}'>第{{nums[index]}}单元 {{item.theme}}</button>
+</view>
 </view>

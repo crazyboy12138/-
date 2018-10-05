@@ -2,10 +2,21 @@
 App({
   onLaunch: function () {
     var that = this
+    that.getUnits()
     that.getQuestions()
     setTimeout(function(){
       console.log('questions', that.globalData.questions)
     }, 2000)
+  },
+  getUnits: function(){
+    var that = this
+    wx.request({
+      url: that.globalData.urlPrefix + '/unit/listAll',
+      success: function(res){
+        that.globalData.units = res.data
+        console.log('units', that.globalData.units)
+      }
+    })
   },
   getQuestions: function () {
     var that = this
@@ -19,7 +30,7 @@ App({
     var data = this.globalData
     var p = new Promise(function (resolve, reject) {
       wx.request({
-        url: data.urlPrefix + '/listQuestionByUnitId?unitId=' + (count - 1),
+        url: data.urlPrefix + '/question/listQuestionByUnitId?unitId=' + (count - 1),
         success: function (res) {
           console.log('unit' + count, res)
           for (var obj in res.data) {
@@ -44,8 +55,8 @@ App({
   },
   globalData: {
     userInfo: null,
-    address: 'http://119.29.9.243/question/question/',
-    urlPrefix: 'http://127.0.0.1:8003/question',
+    // urlPrefix: 'http://127.0.0.1:8003',
+    urlPrefix: 'http://ruanjiangongcheng2.xyz:8003',
     questions:{
       arr1: [],
       arr2: [],
@@ -56,10 +67,6 @@ App({
       arr2: [],
       arr3: []
     },
-    historyScore: {
-      unit1: 0,
-      unit2: 0,
-      unit3: 0
-    }
+    units: []
   }
 })

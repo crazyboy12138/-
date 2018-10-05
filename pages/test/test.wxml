@@ -8,7 +8,8 @@
 <view class='content'>{{question[index].content}}</view>
 <view class='imageBlock'>
 <block wx:for='{{question[index].urls}}' wx:for-index='indexOfPics' wx:key=''>
-  <image src='{{item}}' class='questionImage' mode='center' bindtap='showImage' data-index='{{indexOfPics}}'></image>
+  <image src='{{item}}' wx:if='{{question[index].urlLength > 1}}' class="questionImage" mode='center' bindtap='showImage' data-index='{{indexOfPics}}'></image>
+  <image src='{{item}}' wx:else bindtap='showImage' mode='widthFix' data-index='{{indexOfPics}}'></image>
 </block>
 </view>
 

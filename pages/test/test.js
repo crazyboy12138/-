@@ -25,9 +25,13 @@ Page({
         count++
         a = String.fromCharCode(65 + count)
       }
+      if(question[p].urls){
+        question[p].urlLength = question[p].urls.length
+      }
+     
       options.push(temp)
     }
-    console.log('options', options)
+     console.log('options', options)
     var charset = []
     for(var i = 0; i < 26; i++){
       charset.push(String.fromCharCode(65 + i))

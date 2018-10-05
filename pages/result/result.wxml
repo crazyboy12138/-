@@ -16,6 +16,7 @@
     <view class='score'>
       <view>本次成绩：{{curScore}}</view>
       <view>最高成绩：{{maxScore}}</view>
+      <view wx:if='{{finalScore}}'>最终成绩：{{finalScore}}</view>
     </view>
     <button class='back' bindtap='back'>返回</button>
   </view>
