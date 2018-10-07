@@ -56,7 +56,8 @@ App({
   globalData: {
     userInfo: null,
     // urlPrefix: 'http://127.0.0.1:8003',
-    urlPrefix: 'http://ruanjiangongcheng2.xyz:8003',
+    urlPrefix: 'https://ruanjiangongcheng2.xyz:8443/mathexam',
+    // urlPrefix: 'https://119.29.9.243:8443/mathexam',
     questions:{
       arr1: [],
       arr2: [],

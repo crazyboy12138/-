@@ -9,7 +9,7 @@
 <view class='imageBlock'>
 <block wx:for='{{question[index].urls}}' wx:for-index='indexOfPics' wx:key=''>
   <image src='{{item}}' wx:if='{{question[index].urlLength > 1}}' class="questionImage" mode='center' bindtap='showImage' data-index='{{indexOfPics}}'></image>
-  <image src='{{item}}' wx:else bindtap='showImage' mode='widthFix' data-index='{{indexOfPics}}'></image>
+  <image src='{{item}}' wx:else bindtap='showImage' mode='widthFix' data-index='{{indexOfPics}}' class='fixed'></image>
 </block>
 </view>
 
@@ -17,6 +17,6 @@
 <!--选项-->
 
 <view wx:for='{{options[index]}}' wx:for-index='indexOfOptions' class='options'  wx:key=''>
-  <view class='ABCD' bindtap='choose' data-index='{{indexOfOptions}}'>{{charset[indexOfOptions]}}</view>
+  <view class='ABCD' hover-class='viewhover' bindtap='choose' data-index='{{indexOfOptions}}'>{{charset[indexOfOptions]}}</view>
   <text>{{item}}</text>
 </view>

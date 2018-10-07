@@ -27,8 +27,8 @@
 }
 
 
-a:hover{
-  color: green;
+.viewhover{
+  background: green;
 }
 
 .myButton{
@@ -123,8 +123,7 @@ a:hover{
   height: 300rpx;
 }
 .imageBlock{
-  margin-left: 75rpx;
-  margin-right: 75rpx;
+  
 }
 .optionImage{
   width: 600rpx;
@@ -141,4 +140,8 @@ a:hover{
 }
 .content{
   margin: 40rpx;
+}
+.fixed{
+  height: 200rpx;
+  width: 100%;
 }
